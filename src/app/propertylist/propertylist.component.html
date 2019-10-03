@@ -1,0 +1,57 @@
+<div *ngFor="let item of data" class="row sectionimage">
+    <div class="col-md-4">
+        <div id="demo" class="carousel slide">
+
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="assets/images/hall.jpeg" alt="Los Angeles">
+
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/images/kichen.jpeg" alt="Chicago">
+
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/images/buid.jpeg" alt="New York">
+
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#demo" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+    </div>
+    <div class="col-md-8">
+        <table class="table table-bordered">
+            <tr>
+                <th>{{item.sqft}}
+                    <p>Buildup</p>
+                </th>
+                <th>{{item.deposite}}
+                    <p>Deposite</p>
+                </th>
+                <th>{{item.rent}}
+                    <p>Rent(Negotiable)</p>
+                </th>
+            </tr>
+
+        </table>
+        <hr>
+        <table class="table table-bordered tablerow">
+            <tr>
+                <th>{{item.furnish}}
+
+                </th>
+                <th>{{item.construct}}
+
+                </th>
+            </tr>
+        </table>
+        <button class="btn btn-danger">Get Owner Details</button>
+        <button class="btn btn-info">Send SMS</button>
+        <button class="btn btn-info">Send Email</button>
+    </div>
+</div>

@@ -1,0 +1,66 @@
+<main class="login-bg h-100">
+        <div class="container login-container-bg">
+        <div class="row align-items-center h-100">
+              <div class="col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-md-2 offset-lg-3 col-lg-6 login-box">
+                 <div class="row h-100">
+                   <div class="col-sm-12">
+                       <h1 class="my-5">Sign In</h1>
+                       <div class="card">
+                          <div class="card-body p-3">
+                             <form #userForm="ngForm" (submit)="onSubmit(userForm.value)">
+                                <div class="form-group">
+                                   <label for="exampleInputEmail1">Email Address</label>
+                                   <input type="email" class="form-control" name="email" ngModel #emailRef="ngModel" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                                </div>
+                                <div *ngIf="emailRef.errors?.required && emailRef.touched" class="errorcolor">
+                                 Email is required
+                                </div>
+                                <div *ngIf="emailRef.errors?.pattern" class="errorcolor">
+                                 Please Enter valid email address
+                                </div>
+                                <div class="form-group">
+                                   <label for="exampleInputPassword1">Password</label>
+                                   <input type="password" class="form-control" name="password" ngModel #passwordRef="ngModel" required  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}">
+                                </div>
+                                <div *ngIf="passwordRef.errors?.required && passwordRef.touched" class="errorcolor">
+                              password is required  
+                              </div>
+                              <div *ngIf="passwordRef.errors?.pattern" class="errorcolor">
+                                 Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters
+                                </div>
+                                <div class="form-group form-check d-flex justify-content-between">
+                                   <div>
+                                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                      <label class="form-check-label" for="exampleCheck1">Forgot Password</label>
+                                   </div>
+                                   <div>
+                                      <label class="form-check-label" for="exampleCheck1">Don't have an account? 
+                                       <a routerLink="/signup" routerLinkActive="active" class="text-primary"> Get Started</a></label>
+                                   </div>
+                                </div>
+                                <div class="text-center mt-4">
+                                 <a routerLink="/dashboard" ><button type="submit" [disabled]="!userForm.form.valid" class="btn btn-primary">Login</button></a>
+                                </div>
+                                <h5 class="my-4">OR</h5>
+                                <div class="d-flex justify-content-center">
+                                   <ul>
+                                      <li><a href="#"><i class="fa fa-facebook"></i></a>
+                                      </li>
+                                      <li><a href="#"><i class="fa fa-twitter"></i></a>
+                                      </li>
+                                      <li><a href="#"><i class="fa fa-google"></i></a>
+                                      </li>
+                                   </ul>
+                                </div>
+                             </form>
+                          </div>
+                       </div>
+                    </div>
+                    
+                 </div>
+              </div>
+           </div>
+        </div>
+     </main>
+     <!-- <a routerLink="/Home" routerLinkActive="active">Home</a>
+    <a routerLink="/About">About</a> -->

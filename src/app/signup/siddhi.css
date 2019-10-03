@@ -1,0 +1,133 @@
+body,
+html {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+body {
+	font:'Lato', sans-serif;
+	font-size: 16px;
+	color: #333;
+	font-weight: 300;
+}
+
+.btn-primary {
+	background-image: linear-gradient(to bottom, #1cd4f6 0%, #12c0df 51%, #12c0df 100%);
+	border: 0px;
+	border-radius: 10px
+}
+
+.text-primary {
+	color: #0dcbe7 !important;
+}
+
+.fa {
+	height: 40px;
+	font-size: 17px;
+	width: 40px;
+	line-height: 40px;
+	text-align: center;
+	text-decoration: none;
+	margin: 5px 10px;
+	border-radius: 10px;
+}
+
+.fa:hover {
+	opacity: 0.7;
+}
+
+.fa-facebook {
+	background: #3B5998;
+	color: white;
+}
+
+.fa-twitter {
+	background: #55ACEE;
+	color: white;
+}
+
+.fa-google {
+	background: #dd4b39;
+	color: white;
+}
+
+/*Login Page CSS*/
+
+.login-bg {
+	background: url("/assets/images/grey-bg.jpg") no-repeat;
+	background-size: 100% 50%;
+	background-position: 50% 50%;
+}
+
+.login-bg h1 {
+	color: #fff;
+	font-size: 40px;
+	font-weight: 600;
+	text-align: center;
+}
+
+.login-bg h5 {
+	color: #000;
+	font-size: 20px;
+	font-weight: 600;
+	text-align: center;
+}
+
+.login-bg h5::before,
+.login-bg h5::after {
+	display: inline-block;
+	content: "";
+	border-top: 1px solid #cccccc;
+	width: 4rem;
+	margin: 0 1rem;
+	transform: translateY(-7px);
+}
+
+.login-bg .card {
+	border: 30px solid rgba(255, 255, 255, .06);
+	background: transparent;
+}
+
+.login-bg .card .card-body {
+	background: #fff;
+}
+
+.login-container-bg {
+	background: url("/assets/images/login-screen2.jpg") repeat-y;
+	background-size: 100%;
+	height: 100%;
+}
+
+.login-container-bg:before {
+	content: "";
+	background: url("/assets/images/broker.png") no-repeat;
+	background-position-x: 0%;
+	background-position-y: 0%;
+	background-position: bottom right;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+.login-bg ul {
+	margin: 0px;
+	padding: 0px;
+}
+
+.login-bg ul li {
+	list-style-type: none;
+	display: inline-block;
+}
+
+.login-bg input {
+	background: #00476b;
+	border-radius: 10px;
+	border: 0px;
+	color: #fff;
+}
+.errorcolor{
+	color:red;
+}
