@@ -15,6 +15,8 @@ import{HighchartsChartComponent} from 'highcharts-angular';
 import {AgmCoreModule} from '@agm/core';
 import { MapComponent } from './map/map.component';
 import { AddPropertyComponent } from './addProperty/addproperty.component';
+import { LoginService } from './Shared/Login.service';
+import {HttpClientModule} from "@angular/common/http";
 
 var routes = [
   { path: "property", component: PropertyComponent },
@@ -45,6 +47,7 @@ var routes = [
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     FormsModule,
     AgmCoreModule.forRoot({
       apiKey:''
@@ -52,7 +55,7 @@ var routes = [
     }),
     RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
