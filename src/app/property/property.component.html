@@ -1,5 +1,67 @@
-<div class="row">
-    <table class="table table-bordered tablerow">
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-6">
+            <h4>Apartment Type</h4>
+            <br>
+            <br>
+            <div class="row">
+<div class="col-md-3">
+        <a routerLink="/dashboard/property/1RK" class="btn btn-info">1RK</a>
+
+</div>
+<div class="col-md-3">
+        <a routerLink="/dashboard/property/1BHK" class="btn btn-info">1BHK</a>
+
+    </div>
+    <div class="col-md-3">
+            <a routerLink="/dashboard/property/2BHK" class="btn btn-info">2BHK</a>
+
+        </div>
+        <div class="col-md-3">
+                <a routerLink="/dashboard/property/3BHK" class="btn btn-info">3BHK</a>
+
+            </div>
+            </div>
+            
+        </div>
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-12">
+                    <h4>Rent Range (per month)</h4>
+                </div>
+
+            </div>
+
+            <br>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <input type="range" class="custom-range">
+                </div>
+            </div>
+            <form action="#">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-6">
+                                    Rs.<input type="text" value="0">                            </div>
+                            <div class="col-md-6">
+                                    Rs.<input type="text" value="Rs 50,000.00">                            </div>
+                        </div>
+
+
+                    </div>
+                   
+
+                </div>
+
+
+            </form>
+        </div> 
+    </div>
+    
+    <!-- <table class="table table-bordered tablerow">
         <tr>
             <th>
                 Apartment Type
@@ -24,6 +86,23 @@
                 </form>
             </th>
         </tr>
-    </table>
+    </table> -->
 
 </div>
+<div class="row">
+<div class="col-md-2">
+        <input type="checkbox"> Select All
+
+</div>
+<div class="col-md-4">
+        <i class="fa fa-trash"></i>
+    </div>
+</div>
+    
+    
+<div class="container">
+        <div class="row">
+                <router-outlet></router-outlet>
+        </div>
+</div>
+
