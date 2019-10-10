@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import {NgImageSliderModule} from 'ng-image-slider';
+
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -28,6 +30,9 @@ import { ClientComponent } from './client/client.component';
 import { ClientListComponent } from './clientlist/clientlist.component';
 // import { MydashboardComponent } from './Mydashboard/mydashboard.component';
 import { LoginService } from './Shared/Login.service';
+import {CarouselComponent} from './carousel/carousel.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
 
 var routes = [
 
@@ -84,7 +89,8 @@ var routes = [
     BhkComponent,
     Bhk2Component,
     ClientComponent,
-    ClientListComponent
+    ClientListComponent,
+    CarouselComponent
 
   ],
   imports: [
@@ -93,11 +99,14 @@ var routes = [
     HttpClientModule,
     FormsModule,
     HttpClientModule,
+    NgImageSliderModule,
+    
     AgmCoreModule.forRoot({
       apiKey: ''
 
     }),
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    NgbModule
   ],
   providers: [LoginService, SignUpService],
   bootstrap: [AppComponent]

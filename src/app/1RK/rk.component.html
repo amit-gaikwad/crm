@@ -1,33 +1,11 @@
 1RK
 <div *ngFor="let item of data" class="row sectionimage">
-            <input type="checkbox"> 
+            
    
         <div class="col-md-4">
-            <div id="demo" class="carousel slide">
-    
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="assets/images/hall.jpeg" alt="Los Angeles">
-    
-                    </div>
-                    <div class="carousel-item">
-                        <img src="assets/images/kichen.jpeg" alt="Chicago">
-    
-                    </div>
-                    <div class="carousel-item">
-                        <img src="assets/images/buid.jpeg" alt="New York">
-    
-                    </div>
-                </div>
-                <a class="carousel-control-prev" href="#demo" data-slide="prev">
-                    <span class="carousel-control-prev-icon"></span>
-                </a>
-                <a class="carousel-control-next" href="#demo" data-slide="next">
-                    <span class="carousel-control-next-icon"></span>
-                </a>
-            </div>
+            <app-carousel></app-carousel> 
         </div>
-        <div class="col-md-7">
+        <div class="col-md-8">
             <table class="table table-bordered">
                 <tr>
                     <th>{{item.sqft}}
