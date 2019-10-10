@@ -17,7 +17,7 @@ import { AgmCoreModule } from '@agm/core';
 import { MapComponent } from './map/map.component';
 import { AddPropertyComponent } from './addProperty/addproperty.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
-import { LoginService } from './login/login.service';
+// import { LoginService } from './login/login.service';
 import { SignUpService } from './signup/signup.service';
 import { MyContentComponent } from './content/content.component';
 import { RkComponent } from './1RK/rk.component';
@@ -27,6 +27,7 @@ import { Bhk2Component } from './2BHK/2bhk.component';
 import { ClientComponent } from './client/client.component';
 import { ClientListComponent } from './clientlist/clientlist.component';
 // import { MydashboardComponent } from './Mydashboard/mydashboard.component';
+import { LoginService } from './Shared/Login.service';
 
 var routes = [
 
@@ -89,6 +90,7 @@ var routes = [
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     FormsModule,
     HttpClientModule,
     AgmCoreModule.forRoot({

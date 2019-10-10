@@ -1,5 +1,6 @@
 import { Component } from "@angular/core";
-import { LoginService } from "./login.service";
+import { LoginService } from '../Shared/Login.service';
+import {Router} from "@angular/router";
 @Component({
     selector: "my-login",
     templateUrl: "./login.component.html",
@@ -7,12 +8,19 @@ import { LoginService } from "./login.service";
 
 })
 export class LoginComponent {
-    onSubmit(value: any) {
-        console.log(value);
-    }
-    constructor(private mylogin: LoginService) {
-        mylogin.getAll().subscribe((Response: any) => {
-            this.mylogin = Response;
+    arr:any;
+    constructor(private loginServ:LoginService,private router:Router)
+    {
+        loginServ.getLogin().subscribe((response:any)=>{
+            this.arr=response;
         });
     }
+    onSubmit(values: any) {
+       // console.log(value);
+        if(values.username==this.arr.UName && values.pwd==this.arr.PWD)
+        {
+        this.router.navigate(["/dashboard"]);
+        }
+    }
+   
 }
