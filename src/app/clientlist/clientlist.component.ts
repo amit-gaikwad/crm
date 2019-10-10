@@ -13,5 +13,5 @@ export class ClientListComponent {
         { fname: "sonia", lname: "sharma", email: "janhavi@gmail.com", mobile: "0987655434", address: "ravet, pune" }
 
     ];
-    @Input()clients;
+    @Input()clients="";
 }

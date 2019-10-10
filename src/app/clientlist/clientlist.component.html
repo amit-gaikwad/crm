@@ -1,6 +1,6 @@
 <table class="table table-striped table-hover" *ngFor="let item of clientdata">
 
-    <tbody  *ngIf="clients===item.fname || clients===item.lname">
+    <tbody  *ngIf="item.fname?.includes(clients) || item.lname?.includes(clients)">
         <tr>
             <th>
                 <input type="checkbox" id="selectAll">
